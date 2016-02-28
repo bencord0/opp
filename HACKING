@@ -1,0 +1,27 @@
+Building a PEX archive
+----------------------
+
+Opp is distributed as a PEX archive. It can be built in a virtualenv with the
+following commands.
+
+	$ pyvenv venv
+or
+	$ virtualenv vevn
+
+then
+	$ source venv/bin/activate
+	(venv) $ pip install pex
+	(venv) $ pex -o ~/bin/opp \
+	    --disable-cache \
+	    --no-wheel \
+	    -m opp .
+
+If ~/bin is in PATH, or you have otherwise got a prebuilt, then you can use
+the `opp` tool directly. In this case, you don't need to prepare a virtualenv.
+
+	$ opp build
+
+More about PEX
+--------------
+https://pex.readthedocs.org/en/stable/whatispex.html#whatispex
+

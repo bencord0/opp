@@ -1,0 +1,11 @@
+*.egg-info
+__pycache__
+.cache
+.eggs
+
+*venv*
+
+*.swp
+
+INPUT
+OUTPUT
