@@ -21,7 +21,7 @@ deployment tools provided by the Opps-enheimer suite.
 import logging
 from argparse import ArgumentParser
 
-__version__ = '0'
+__version__ = '1'
 
 LOG_LEVELS = {
     'info': logging.INFO,
