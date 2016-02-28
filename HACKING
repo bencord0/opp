@@ -19,7 +19,10 @@ then
 If ~/bin is in PATH, or you have otherwise got a prebuilt, then you can use
 the `opp` tool directly. In this case, you don't need to prepare a virtualenv.
 
-	$ opp build
+	$ opp pull bencord0/opp
+	$ opp build bencord0/opp
+
+This creates a pex archive at ./bencord0/opp/OUTPUT/opp.pex
 
 More about PEX
 --------------

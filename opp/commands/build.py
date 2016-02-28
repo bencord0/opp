@@ -20,12 +20,16 @@ from opp import subcommands
 
 logger = logging.getLogger(__name__)
 build_parser = subcommands.add_parser('build')
+build_parser.add_argument('repository',
+                          help='<vendor>/<repo> path. e.g. bencord0/opp')
 
 
 def build(args):
     logger.info('build: {}'.format(args))
 
-    build_script = 'BUILD'
-    build_script_path = os.path.abspath(build_script)
+    path = os.path.abspath(args.repository)
 
-    subprocess.check_call([build_script_path])
+    build_script = 'BUILD'
+    build_script_path = os.path.join(path, build_script)
+
+    subprocess.check_call([build_script_path], cwd=path)

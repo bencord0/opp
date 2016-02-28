@@ -53,6 +53,7 @@ setup(
     entry_points={
         'opp.commands': [
             'build = opp.commands.build:build',
+            'pull = opp.commands.pull:pull',
         ],
         'console_scripts': [
             'opp = opp.__main__:main',
